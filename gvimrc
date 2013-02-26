@@ -11,5 +11,5 @@ set guioptions-=T                 " Hide toolbar.
 set background=dark               " Background.
 set lines=38 columns=90           " Window dimensions.
 set guioptions-=r                 " Don't show right scrollbar
-colorscheme railscasts            " Set the color scheme for gvim
+colorscheme railscasts2           " Set the color scheme for gvim
 highlight ColorColumn guibg=black
