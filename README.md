@@ -22,15 +22,15 @@ https://github.com/tpope/vim-rake
 https://github.com/tpope/vim-cucumber
 https://github.com/tpope/vim-markdown
 https://github.com/Raimondi/delimitMate
-
+https://github.com/thoughtbot/vim-rspec
 
 ## Optional
-   | tagBar       |                                                                                                                |
+X  | tagBar       |                                                                                                                |
    | Vroom        | to run test quickly                                                                                            |
    | Dispatch     | to run test quickly                                                                                            |
    | jasmine.vim  |                                                                                                                |
    | TagHighlight |                                                                                                                |
-   | delimitMate  | automatically closes quotes                                                                                    |
+X  | delimitMate  | automatically closes quotes                                                                                    |
    | syntastic    | check syntax when you save                                                                                     |
    | autotag      | automatically creates tags for fast sourcecode browsing. use ctrl-[ over a symbol name to go to its definition |
    | matchit      | helps with matching brackets, improves other plugins                                                           |
