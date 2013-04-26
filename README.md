@@ -15,6 +15,14 @@ X  | vim-rais        |                                      | https://github.com
 X  | endwise         | automatically closes blocks          | https://github.com/tpope/vim-endwise
 X  | ctags           | to quickly navigate through the code |
 
+## Others
+https://github.com/tpope/vim-bundler
+https://github.com/tpope/gem-ctags
+https://github.com/tpope/vim-rake
+https://github.com/tpope/vim-cucumber
+https://github.com/tpope/vim-markdown
+https://github.com/Raimondi/delimitMate
+
 
 ## Optional
    | tagBar       |                                                                                                                |
@@ -34,3 +42,5 @@ X  | ctags           | to quickly navigate through the code |
 
 # Dependencies
 * exuberant-ctags
+* gem install gem-ctags
+* gem ctags
