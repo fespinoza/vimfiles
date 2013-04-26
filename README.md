@@ -1,20 +1,20 @@
 # Plugins to Install
 
-X | pathogen | plugin management |
-| tabular | to align as table | 
-| snipMate | textmate-like snippets |
-| ctrlP | quick code navigation |
-| nerdtree | tree code navigation |
-| nerdcommenter | code commenter plugin |
-| buffer explorer | to explore all open buffers |
-| superTab | completes text using tab |
-| fugitive | git support for vim |
-| zoomWin | quick zoom to windows |
-| vim-rais | |
-| Powerline | awesome status bar |
-| endwise | automatically closes blocks |
+X | pathogen        | plugin management                    | https://github.com/tpope/vim-pathogen
+  | tabular         | to align as table                    | https://github.com/godlygeek/tabular
+  | snipMate        | textmate-like snippets               |
+  | ctrlP           | quick code navigation                |
+  | nerdtree        | tree code navigation                 |
+  | nerdcommenter   | code commenter plugin                |
+  | buffer explorer | to explore all open buffers          |
+  | superTab        | completes text using tab             |
+  | fugitive        | git support for vim                  |
+  | zoomWin         | quick zoom to windows                |
+  | vim-rais        |                                      |
+  | Powerline       | awesome status bar                   |
+  | endwise         | automatically closes blocks          |
 
-| ctags | to quickly navigate through the code |
+  | ctags           | to quickly navigate through the code |
 
 
 ## Optional
