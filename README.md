@@ -5,8 +5,8 @@ X  | tabular         | to align as table                    | https://github.com
 X  | snipMate        | textmate-like snippets               | https://github.com/msanders/snipmate.vim
 X  | vim-snippets    | a collection of snippets for vim     | https://github.com/honza/vim-snippets
 X  | ctrlP           | quick code navigation                | https://github.com/kien/ctrlp.vim
-   | nerdtree        | tree code navigation                 |
-   | nerdcommenter   | code commenter plugin                |
+X  | nerdtree        | tree code navigation                 | https://github.com/scrooloose/nerdtree
+X  | nerdcommenter   | code commenter plugin                | https://github.com/scrooloose/nerdcommenter
    | buffer explorer | to explore all open buffers          |
    | superTab        | completes text using tab             |
    | fugitive        | git support for vim                  |
