@@ -7,8 +7,8 @@ X  | vim-snippets    | a collection of snippets for vim     | https://github.com
 X  | ctrlP           | quick code navigation                | https://github.com/kien/ctrlp.vim
 X  | nerdtree        | tree code navigation                 | https://github.com/scrooloose/nerdtree
 X  | nerdcommenter   | code commenter plugin                | https://github.com/scrooloose/nerdcommenter
-   | buffer explorer | to explore all open buffers          |
-   | superTab        | completes text using tab             |
+X  | buffer explorer | to explore all open buffers          | https://github.com/vim-scripts/bufexplorer.zip
+X  | superTab        | completes text using tab             | https://github.com/ervandew/supertab
    | fugitive        | git support for vim                  |
    | zoomWin         | quick zoom to windows                |
    | vim-rais        |                                      |
