@@ -279,4 +279,8 @@ endfunction
 
 " CtrlP
 
-" let g:ctrlp_map = '<leader>t'
+if has("gui_macvim") && has("gui_running")
+  let g:ctrlp_map = '<d-t>'
+else
+  let g:ctrlp_map = '<leader>t'
+endif
