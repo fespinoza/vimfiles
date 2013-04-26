@@ -10,10 +10,10 @@ X  | nerdcommenter   | code commenter plugin                | https://github.com
 X  | buffer explorer | to explore all open buffers          | https://github.com/vim-scripts/bufexplorer.zip
 X  | superTab        | completes text using tab             | https://github.com/ervandew/supertab
 X  | fugitive        | git support for vim                  | https://github.com/tpope/vim-fugitive
-   | zoomWin         | quick zoom to windows                |
-   | vim-rais        |                                      |
-   | Powerline       | awesome status bar                   |
-   | endwise         | automatically closes blocks          |
+X  | zoomWin         | quick zoom to windows                | https://github.com/vim-scripts/ZoomWin
+X  | vim-rais        |                                      | https://github.com/tpope/vim-rails
+   | Powerline       | awesome status bar                   | https://github.com/Lokaltog/powerline
+X  | endwise         | automatically closes blocks          | https://github.com/tpope/vim-endwise
 
    | ctags           | to quickly navigate through the code |
 

@@ -295,3 +295,6 @@ if has("gui_macvim") && has("gui_running")
 else
   map <leader>/ <plug>NERDCommenterToggle<CR>
 endif
+
+" ZoomWin
+map <leader>zw :ZoomWin<CR>
