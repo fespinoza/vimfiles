@@ -266,6 +266,8 @@ function! s:align()
 endfunction
 
 " Ctags and tagbar
+set tags=./tags,tags
+:nnoremap <leader>gt :!ctags -R<CR>
 
 " let g:ctags_path='/usr/local/bin/ctags'
 " let g:ctags_args='-I __declspec+ --exclude=.git'
