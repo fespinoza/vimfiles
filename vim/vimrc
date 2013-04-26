@@ -284,3 +284,6 @@ if has("gui_macvim") && has("gui_running")
 else
   let g:ctrlp_map = '<leader>t'
 endif
+
+" NerdTree
+let g:NERDTreeDirArrows=0                       " fix bad arrows in terminal
