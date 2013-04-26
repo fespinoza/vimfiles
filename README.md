@@ -1,7 +1,7 @@
 # Plugins to Install
 
-| pathogen | plugin management |
-| tabular | to align as table |
+X | pathogen | plugin management |
+| tabular | to align as table | 
 | snipMate | textmate-like snippets |
 | ctrlP | quick code navigation |
 | nerdtree | tree code navigation |
