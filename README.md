@@ -9,7 +9,7 @@ X  | nerdtree        | tree code navigation                 | https://github.com
 X  | nerdcommenter   | code commenter plugin                | https://github.com/scrooloose/nerdcommenter
 X  | buffer explorer | to explore all open buffers          | https://github.com/vim-scripts/bufexplorer.zip
 X  | superTab        | completes text using tab             | https://github.com/ervandew/supertab
-   | fugitive        | git support for vim                  |
+X  | fugitive        | git support for vim                  | https://github.com/tpope/vim-fugitive
    | zoomWin         | quick zoom to windows                |
    | vim-rais        |                                      |
    | Powerline       | awesome status bar                   |
