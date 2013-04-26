@@ -1,8 +1,8 @@
 # Plugins to Install
 
 X | pathogen        | plugin management                    | https://github.com/tpope/vim-pathogen
-  | tabular         | to align as table                    | https://github.com/godlygeek/tabular
-  | snipMate        | textmate-like snippets               |
+X | tabular         | to align as table                    | https://github.com/godlygeek/tabular
+X | snipMate        | textmate-like snippets               | https://github.com/msanders/snipmate.vim
   | ctrlP           | quick code navigation                |
   | nerdtree        | tree code navigation                 |
   | nerdcommenter   | code commenter plugin                |
