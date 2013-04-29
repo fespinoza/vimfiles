@@ -42,6 +42,13 @@ set autoindent
 command! W :w                     " Added :W as a command for save
 let mapleader=","
 
+"" Set natural split opening
+set splitbelow
+set splitright
+
+"" set autoread to reload files when changed elsewhere
+set autoread
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,10 +58,10 @@ imap <C-B> <ESC><C-B>i
 vmap <C-Y> "+y
 
 " Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-h> <c-w>h
+noremap <c-l> <c-w>l
 
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
@@ -78,6 +85,9 @@ map <Up> gk
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
 
 if has("gui_macvim") && has("gui_running")
   " Map command-[ and command-] to indenting or outdenting
@@ -210,19 +220,19 @@ map <leader>rn :call RenameFile()<cr>
 
 " Completion
 
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=solr/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+"set wildmode=list:longest
+"set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+"set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+"set wildignore+=*vim/backups*
+"set wildignore+=*sass-cache*
+"set wildignore+=*DS_Store*
+"set wildignore+=vendor/rails/**
+"set wildignore+=vendor/cache/**
+"set wildignore+=solr/**
+"set wildignore+=*.gem
+"set wildignore+=log/**
+"set wildignore+=tmp/**
+"set wildignore+=*.png,*.jpg,*.gif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN MAPS
@@ -300,3 +310,8 @@ endif
 
 " ZoomWin
 map <leader>zw :ZoomWin<CR>
+
+" Rspec.vim mappings
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
