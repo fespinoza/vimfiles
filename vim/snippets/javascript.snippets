@@ -79,9 +79,9 @@ snippet do
 	} while (${1:/* condition */});
 # Object Method
 snippet :f
-	${1:method_name}: function (${2:attribute}) {
-		${4}
-	}${3:,}
+	${1:method_name}: function(${2:attribute}) {
+		${3}
+	},
 # setTimeout function
 snippet timeout
 	setTimeout(function () {${3}}${2}, ${1:10});
@@ -91,9 +91,6 @@ snippet get
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
-# console.log (Firebug)
-snippet cl
-	console.log(${1});
 # return
 snippet ret
 	return ${1:result}
@@ -156,8 +153,19 @@ snippet sing
 	}
 # Crockford's object function 
 snippet obj
+    .attr("y", function(d) { return d.get('text_y') })
 	function object(o) {
 		function F() {}
 		F.prototype = o;
 		return new F();
 	}
+snippet inf
+	function(${1}) { return ${2} }
+snippet log
+	console.log("${1}");${2}
+snippet :
+	${1}: ${2},
+snippet App.
+	App.${1} = Ember.${2}.extend({
+		${3}
+	});

@@ -44,10 +44,3 @@ X  | delimitMate  | automatically closes quotes                                 
 * exuberant-ctags
 * gem install gem-ctags
 * gem ctags
-
-## Problems
-
-* <c-j>, <c-k> for movement between slipts doen't work
-* <leader>t in macvim doens't work
-* check indentation maps
-* check tab behavior
