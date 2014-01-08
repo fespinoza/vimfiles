@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/fespinoza/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/ember-rails-0.11.1'
+let g:netrw_dirhist_2='/Users/fespinoza/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/ember-data-source-0.0.5'
+let g:netrw_dirhist_3='/Users/fespinoza/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/ember-rails-0.12.0'
+let g:netrw_dirhist_4='/Users/fespinoza/Code/vim_dotfiles/vim/bundle/vim-handlebars'
+let g:netrw_dirhist_5='/Users/fespinoza/Code/vim_dotfiles/vim/bundle/vim-snipmate'
