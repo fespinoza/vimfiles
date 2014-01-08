@@ -85,6 +85,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.html.haml set ft=haml
   autocmd BufNewFile,BufRead *.ctp set ft=php.html
   autocmd BufNewFile,BufRead *.md set ft=markdown
+  autocmd BufNewFile,BufRead *.hbs set ft=handlebars.html
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 
   "for ruby, autoindent with two spaces, always expand tabs
@@ -169,7 +170,7 @@ function! ShowRoutes()
   " Delete empty trailing line
   :normal dd
 endfunction
-map <leader>t :PeepOpen<CR>
+"map <leader>t :PeepOpen<CR>
 "map <leader>t :CommandT<CR>
 "map <leader>rt :CommandTFlush<CR>
 "map <leader>gR :call ShowRoutes()<cr>
@@ -293,3 +294,36 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folds
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Completion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set wildmode=list:longest
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=solr/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ctrlp_map = '<leader>t'

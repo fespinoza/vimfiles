@@ -43,3 +43,33 @@
 [submodule "bundle/vim-coffeescript"]
 	path = bundle/vim-coffeescript
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-git-grep-rails-partial"]
+	path = bundle/vim-git-grep-rails-partial
+	url = git://github.com/skwp/vim-git-grep-rails-partial.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/indexed-search"]
+	path = bundle/indexed-search
+	url = git://github.com/vim-scripts/IndexedSearch.git
+[submodule "bundle/vim-sparkup"]
+	path = bundle/vim-sparkup
+	url = git://github.com/kogakure/vim-sparkup.git
+[submodule "bundle/auto-tag"]
+	path = bundle/auto-tag
+	url = git://github.com/vim-scripts/AutoTag.git
+[submodule "bundle/nerdtree-tabs"]
+	path = bundle/nerdtree-tabs
+	url = git://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git://github.com/skwp/vim-powerline.git
+[submodule "bundle/vim-conque"]
+	path = bundle/vim-conque
+	url = git://github.com/rson/vim-conque.git
+[submodule "bundle/vim-ruby-conque"]
+	path = bundle/vim-ruby-conque
+	url = git://github.com/skwp/vim-ruby-conque.git
