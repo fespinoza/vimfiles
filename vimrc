@@ -2,8 +2,58 @@
 " fespinozacast@gmail.com
 
 set nocompatible                  " Must come first because it changes other options.
+filetype off
 
-silent! call pathogen#runtime_append_all_bundles()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins Managed by Vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle required!
+Bundle 'gmarik/vundle'
+
+Bundle 'Shougo/neocomplcache.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'godlygeek/tabular'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'skwp/vim-git-grep-rails-partial'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/gem-ctags'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rbenv'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/AutoTag'
+Bundle 'vim-scripts/bufexplorer.zip'
+
+filetype plugin indent on     " required!
+
+"" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -327,3 +377,11 @@ set wildignore+=*.png,*.jpg,*.gif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:ctrlp_map = '<leader>t'
+
+colorscheme solarized
+set background=light
+
+" testing shortchuts
+map <leader>rt :Dispatch zeus rspec -t wip spec<CR>
+map <leader>rk :Dispatch zeus rspec -t now spec<CR>
+map <leader>ra :Dispatch zeus rspec spec<CR>
