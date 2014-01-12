@@ -226,28 +226,6 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SNIPMATE PLUGIN EXTRA STUFF
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! ReloadSnippets( snippets_dir, ft )
-  if strlen( a:ft ) == 0
-    let filetype = "_"
-  else
-    let filetype = a:ft
-  endif
-
-  call ResetSnippets()
-  call GetSnippets( a:snippets_dir, filetype )
-endfunction
-nmap ,rr :call ReloadAllSnippets()<CR>
-
-function! EditSnippets()
-  tabnew
-  lcd /Users/fespinoza/vim/snippets
-  NERDTree
-endfunction
-nmap ,rs :call EditSnippets()<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OpenChangedFiles COMMAND
 " Open a split for each dirty file in git
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
