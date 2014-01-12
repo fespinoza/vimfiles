@@ -21,7 +21,6 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skwp/vim-git-grep-rails-partial'
@@ -43,6 +42,10 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 filetype plugin indent on     " required!
 
@@ -189,7 +192,7 @@ nmap <C-Up> [e
 nmap <C-Down> ]e
 " multiple lines
 vmap <C-Up> [egv
-vmap<C-Down> ]egv
+vmap <C-Down> ]egv
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN MAPS
@@ -200,46 +203,6 @@ map <Leader>b :BufExplorer<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MAPS TO JUMP TO SPECIFIC COMMAND-T TARGETS AND FILES
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! ShowRoutes()
-  " Requires 'scratch' plugin
-  :topleft 100 :split __Routes__
-  " Make sure Vim doesn't write __Routes__ as a file
-  :set buftype=nofile
-  " Delete everything
-  :normal 1GdG
-  " Put routes output in buffer
-  :0r! rake -s routes
-  " Size window to number of lines (1 plus rake output length)
-  :exec ":normal " . line("$") . "_ "
-  " Move cursor to bottom
-  :normal 1GG
-  " Delete empty trailing line
-  :normal dd
-endfunction
-"map <leader>t :PeepOpen<CR>
-"map <leader>t :CommandT<CR>
-"map <leader>rt :CommandTFlush<CR>
-"map <leader>gR :call ShowRoutes()<cr>
-"map <leader>gr :topleft :split config/routes.rb<cr>
-"map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-"map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-"map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-"map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-"map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
-"map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-"map <Leader>gle :tabnew config/locales/es.yml<cr>
-"map <Leader>gln :tabnew config/locales/en.yml<cr>
-"map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-"map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
-"map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
-"map <leader>gg :topleft 100 :split Gemfile<cr>
-"map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
-"map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-"map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
@@ -345,12 +308,11 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folds
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
@@ -381,7 +343,18 @@ let g:ctrlp_map = '<leader>t'
 colorscheme solarized
 set background=light
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim Rspec
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:rspec_command = "Dispatch zeus rspec {spec}"
+
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
+
 " testing shortchuts
-map <leader>rt :Dispatch zeus rspec -t wip spec<CR>
-map <leader>rk :Dispatch zeus rspec -t now spec<CR>
-map <leader>ra :Dispatch zeus rspec spec<CR>
+"map <leader>rt :Dispatch zeus rspec -t wip spec<CR>
+"map <leader>rk :Dispatch zeus rspec -t now spec<CR>
+"map <leader>ra :Dispatch zeus rspec spec<CR>
