@@ -46,6 +46,9 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'stefanoverna/vim-i18n'
+Bundle 'edsono/vim-matchit'
 
 filetype plugin indent on     " required!
 
@@ -97,12 +100,17 @@ set t_Co=256                      " 256 colors
 set background=dark
 color grb256
 
+set clipboard+=unnamed            " enables copy in vim and paste in OSX
+
 " color column
 highlight ColorColumn ctermbg=020202
 set colorcolumn=80
 
 command! W :w                     " Added :W as a command for save
 let mapleader=","
+
+set exrc                          " enable per-directory .vimrc files
+set secure                        " disable unsafe commands in local .vimrc files
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOLDING
@@ -200,6 +208,7 @@ vmap <C-Down> ]egv
 map <C-S-n> :NERDTreeToggle<CR>
 map <Leader>cv <plug>NERDCommenterToggle
 map <Leader>b :BufExplorer<CR>
+map <Leader>bb :BufExplorer<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -223,7 +232,7 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <leader>n :call RenameFile()<cr>
+map <leader>rn :call RenameFile()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OpenChangedFiles COMMAND
@@ -325,14 +334,22 @@ set background=light
 " Vim Rspec
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:rspec_command = "Dispatch zeus rspec {spec}"
+let g:rspec_command = "Dispatch rspec {spec}"
 
-map <Leader>rt :call RunCurrentSpecFile()<CR>
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
+"map <Leader>rt :call RunCurrentSpecFile()<CR>
+"map <Leader>rs :call RunNearestSpec()<CR>
+"map <Leader>rl :call RunLastSpec()<CR>
+"map <Leader>ra :call RunAllSpecs()<CR>
 
 " testing shortchuts
-"map <leader>rt :Dispatch zeus rspec -t wip spec<CR>
-"map <leader>rk :Dispatch zeus rspec -t now spec<CR>
-"map <leader>ra :Dispatch zeus rspec spec<CR>
+map <leader>rt :Dispatch rspec -t wip spec<CR>
+map <leader>rc :call RunCurrentSpecFile()<CR>
+map <leader>rk :Dispatch rspec -t now spec<CR>
+map <leader>ra :Dispatch rspec spec<CR>
+
+function! NewHashSyntax()
+  /:\([^, A-Z'"]\+\) \?=> \?\([^, ]\+\)
+  :%s//\1: \2/g
+endfunction
+
+map <leader>n :NERDTreeToggle<CR>
