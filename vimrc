@@ -13,9 +13,17 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'fespinoza/vim-snippets'
+Bundle 'tomtom/tlib_vim'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'christoomey/vim-colors-ctoomey'
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
@@ -24,6 +32,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skwp/vim-git-grep-rails-partial'
+Bundle 'stefanoverna/vim-i18n'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/gem-ctags'
 Bundle 'tpope/vim-bundler'
@@ -42,13 +51,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'stefanoverna/vim-i18n'
-Bundle 'edsono/vim-matchit'
 
 filetype plugin indent on     " required!
 
