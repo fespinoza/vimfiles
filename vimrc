@@ -53,6 +53,7 @@ Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'scrooloose/syntastic'
 Bundle 'ngmy/vim-rubocop'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on     " required!
 
@@ -115,6 +116,13 @@ let mapleader=","
 
 set exrc                          " enable per-directory .vimrc files
 set secure                        " disable unsafe commands in local .vimrc files
+
+"" autocomplete
+set infercase
+set completeopt=longest,menuone
+set omnifunc=syntaxcomplete#Complete
+set completefunc=syntaxcomplete#Complete
+set complete=.,w,b,u,U,t,i,d
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOLDING
