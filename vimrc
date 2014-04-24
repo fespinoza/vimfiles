@@ -51,6 +51,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'scrooloose/syntastic'
+Bundle 'ngmy/vim-rubocop'
 
 filetype plugin indent on     " required!
 
@@ -355,3 +357,8 @@ function! NewHashSyntax()
 endfunction
 
 map <leader>n :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic + Rubocop
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
