@@ -13,6 +13,7 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
+" vim: interpret a file by function and cache file automatically
 Bundle 'MarcWeber/vim-addon-mw-utils'
 
 " SnipMate
@@ -22,17 +23,31 @@ Bundle 'fespinoza/vim-snippets'
 " Automatic Autocomplete compatible with SnipMate
 Bundle 'vim-scripts/L9'
 Bundle 'othree/vim-autocomplpop'
+
+" Some utility functions for VIM
 Bundle 'tomtom/tlib_vim'
+
+" Colors
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-colors-ctoomey'
+
+" lean & mean status/tabline for vim that's light as air
+Bundle 'bling/vim-airline'
+
+" Seamless navigation between tmux panes and vim splits
 Bundle 'christoomey/vim-tmux-navigator'
+
+" Fuzzy file, buffer, mru, tag, etc finder.
+Bundle 'kien/ctrlp.vim'
+
+" Syntax checking hacks for vim
+Bundle 'scrooloose/syntastic'
+
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -56,7 +71,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'scrooloose/syntastic'
 Bundle 'ngmy/vim-rubocop'
 
 filetype plugin indent on     " required!
