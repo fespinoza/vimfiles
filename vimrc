@@ -96,10 +96,10 @@ set backspace=indent,eol,start    " Intuitive backspacing.
 set hidden                        " Handle multiple buffers better.
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
+set relativenumber                " Show relative line numbers
 set number                        " Show line numbers.
 set cursorline                    " Highlight the current line
 set ruler                         " Show cursor position.
-set scrolloff=3                   " Show 3 lines of context around the cursor.
 set novisualbell                  " No beeping.
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
@@ -137,10 +137,9 @@ set secure                        " disable unsafe commands in local .vimrc file
 
 "" autocomplete
 set infercase
-set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 set completefunc=syntaxcomplete#Complete
-set complete=.,w,b,u,U,t,i,d
+set complete=.,w,b,u,t,i,d
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOLDING
@@ -148,6 +147,7 @@ set complete=.,w,b,u,U,t,i,d
 "set foldcolumn=2                 " Display folds visually
 "set foldopen=all                 " Open automatically fold
 set foldmethod=syntax             " indent | manual are other options
+set completeopt=longest,menuone
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO COMMANDS
@@ -199,11 +199,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Cut-Copy-Paste
-nmap <C-B> "+gP
-imap <C-B> <ESC><C-B>i
-vmap <C-Y> "+y
-map <C-S> :w<CR>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -366,11 +361,6 @@ set background=light
 
 let g:rspec_command = "Dispatch rspec {spec}"
 
-"map <Leader>rt :call RunCurrentSpecFile()<CR>
-"map <Leader>rs :call RunNearestSpec()<CR>
-"map <Leader>rl :call RunLastSpec()<CR>
-"map <Leader>ra :call RunAllSpecs()<CR>
-
 " testing shortchuts
 map <leader>rt :Dispatch rspec -t wip spec<CR>
 map <leader>rc :call RunCurrentSpecFile()<CR>
@@ -387,4 +377,5 @@ map <leader>n :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic + Rubocop
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
