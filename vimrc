@@ -14,8 +14,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'MarcWeber/vim-addon-mw-utils'
+
+" SnipMate
 Bundle 'garbas/vim-snipmate'
 Bundle 'fespinoza/vim-snippets'
+
+" Automatic Autocomplete compatible with SnipMate
+Bundle 'vim-scripts/L9'
+Bundle 'othree/vim-autocomplpop'
 Bundle 'tomtom/tlib_vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
