@@ -17,7 +17,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'fespinoza/vim-snippets'
 Bundle 'tomtom/tlib_vim'
-Bundle 'Shougo/neocomplcache.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-colors-ctoomey'
@@ -53,7 +52,6 @@ Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'scrooloose/syntastic'
 Bundle 'ngmy/vim-rubocop'
-Bundle 'ervandew/supertab'
 
 filetype plugin indent on     " required!
 
