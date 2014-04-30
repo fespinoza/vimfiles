@@ -64,14 +64,6 @@ set completefunc=syntaxcomplete#Complete
 set complete=.,w,b,u,t,i,d
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FOLDING
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set foldcolumn=2                 " Display folds visually
-"set foldopen=all                 " Open automatically fold
-set foldmethod=syntax             " indent | manual are other options
-set completeopt=longest,menuone
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO COMMANDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -133,7 +125,6 @@ imap <c-l> <space>=><space>
 
 " Clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
-nnoremap <leader><leader> <c-^>
 
 " Indentation Commands
 nmap <Leader>hh <<
@@ -301,6 +292,8 @@ map <leader>n :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:airline_powerline_fonts = 1
+
 let g:markdown_fold_style = 'nested'
 
 command! Path :call EchoPath()
