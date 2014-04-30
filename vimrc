@@ -301,3 +301,14 @@ map <leader>n :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:markdown_fold_style = 'nested'
+
+command! Path :call EchoPath()
+function! EchoPath()
+  echo join(split(&path, ","), "\n")
+endfunction
+
+command! TagFiles :call EchoTags()
+function! EchoTags()
+  echo join(split(&tags, ","), "\n")
+endfunction
