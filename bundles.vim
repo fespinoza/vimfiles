@@ -23,7 +23,6 @@ Bundle 'christoomey/vim-colors-ctoomey'
 
 " lean & mean status/tabline for vim that's light as air
 Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
 
 " Seamless navigation between tmux panes and vim splits
 Bundle 'christoomey/vim-tmux-navigator'
