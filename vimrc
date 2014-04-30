@@ -1,88 +1,10 @@
 " My Vim's Configuration File
 " fespinozacast@gmail.com
 
-set nocompatible                  " Must come first because it changes other options.
+set nocompatible            " Must come first because it changes other options.
 filetype off
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins Managed by Vundle
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle required!
-Bundle 'gmarik/vundle'
-
-" vim: interpret a file by function and cache file automatically
-Bundle 'MarcWeber/vim-addon-mw-utils'
-
-" SnipMate
-Bundle 'garbas/vim-snipmate'
-Bundle 'fespinoza/vim-snippets'
-
-" Automatic Autocomplete compatible with SnipMate
-Bundle 'vim-scripts/L9'
-Bundle 'othree/vim-autocomplpop'
-
-" Some utility functions for VIM
-Bundle 'tomtom/tlib_vim'
-
-" Colors
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'christoomey/vim-colors-ctoomey'
-
-" lean & mean status/tabline for vim that's light as air
-Bundle 'bling/vim-airline'
-
-" Seamless navigation between tmux panes and vim splits
-Bundle 'christoomey/vim-tmux-navigator'
-
-" Fuzzy file, buffer, mru, tag, etc finder.
-Bundle 'kien/ctrlp.vim'
-
-" Syntax checking hacks for vim
-Bundle 'scrooloose/syntastic'
-
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'edsono/vim-matchit'
-Bundle 'godlygeek/tabular'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'skwp/vim-git-grep-rails-partial'
-Bundle 'stefanoverna/vim-i18n'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/gem-ctags'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-rbenv'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/AutoTag'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'ngmy/vim-rubocop'
-
-filetype plugin indent on     " required!
-
-"" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+source ~/Vim/bundles.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
