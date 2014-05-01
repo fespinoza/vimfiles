@@ -308,3 +308,14 @@ command! TagFiles :call EchoTags()
 function! EchoTags()
   echo join(split(&tags, ","), "\n")
 endfunction
+
+" Open Github Repo on the browser
+:nmap <leader>gr :call GithubRepo()<CR>
+function! GithubRepo()
+  " get current line under the cursor
+  let line=getline('.')
+  " extract repo name from current line
+  let repo_name=matchlist(line, "Bundle '\\(.*\\)'")[1]
+  " open url silently
+  :silent execute "!open https://github.com/".repo_name | redraw!
+endfunction
