@@ -321,3 +321,9 @@ function! GithubRepo()
   " open url silently
   :silent execute "!open https://github.com/".repo_name | redraw!
 endfunction
+
+" Open Github app from Vim
+command! Github :call OpenGithubApp()
+function! OpenGithubApp()
+  :silent execute "!github" | redraw!
+endfunction
