@@ -19,15 +19,6 @@
 * show spelling sugerences for the word under the cursor `z=`
 * add a word to the dictionary `zg`
 
-# Improvements
-
-* enable CTAGS with vim
-* automatize tmux creation
-
-## Problems
-
-* <leader>t in macvim doens't work
-
 # Tmux Notes
 
 ## windows
