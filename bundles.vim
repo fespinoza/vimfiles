@@ -17,12 +17,15 @@ Bundle 'fespinoza/vim-snippets'
 Bundle 'vim-scripts/L9'
 Bundle 'othree/vim-autocomplpop'
 
-" Colors
+" Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'christoomey/vim-colors-ctoomey'
+Bundle 'chriskempson/base16-vim'
+Bundle 'chriskempson/vim-tomorrow-theme'
 
 " lean & mean status/tabline for vim that's light as air
 Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
 
 " Seamless navigation between tmux panes and vim splits
 Bundle 'christoomey/vim-tmux-navigator'
@@ -36,7 +39,7 @@ Bundle 'scrooloose/syntastic'
 " unimpaired.vim: pairs of handy bracket mappings
 Bundle 'tpope/vim-unimpaired'
 
-" endwise.vim: wisely add "end" in ruby, endfunction/endif/more in vim script,
+" endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script,
 " etc
 Bundle 'tpope/vim-endwise'
 
@@ -72,6 +75,15 @@ Bundle 'vim-scripts/AutoTag'
 Bundle 'tpope/vim-markdown'
 Bundle 'nelstrom/vim-markdown-folding'
 
+" VIM as a presentation tool
+Bundle 'tybenz/vimdeck'
+
+" Parse stack traces or quickfix entries and open the result in vim splits!
+Bundle 'mattboehm/vim-unstack'
+
+" Javascript support for vim
+Bundle "pangloss/vim-javascript"
+
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
@@ -92,15 +104,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'ngmy/vim-rubocop'
-
-" VIM as a presentation tool
-Bundle 'tybenz/vimdeck'
-
-" Parse stack traces or quickfix entries and open the result in vim splits!
-Bundle 'mattboehm/vim-unstack'
-
-" Javascript support for vim
-Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on     " required!
 
