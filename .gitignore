@@ -3,3 +3,4 @@
 *.swp
 tags
 .vagrant
+doc/tags-ja
