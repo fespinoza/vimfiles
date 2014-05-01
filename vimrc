@@ -327,3 +327,14 @@ command! Github :call OpenGithubApp()
 function! OpenGithubApp()
   :silent execute "!github" | redraw!
 endfunction
+
+" ZoomWin
+map <leader>zw :ZoomWin<CR>
+
+function! EditNotes()
+  :vsp ~/.vim/NOTES.md.md
+endfunction
+nmap <leader>l :call EditNotes()<CR>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
