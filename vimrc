@@ -309,6 +309,8 @@ function! EchoTags()
   echo join(split(&tags, ","), "\n")
 endfunction
 
+let g:airline#extensions#tabline#enabled = 1
+
 " Open Github Repo on the browser
 :nmap <leader>gr :call GithubRepo()<CR>
 function! GithubRepo()
