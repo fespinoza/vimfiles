@@ -41,9 +41,9 @@ set expandtab
 set autoindent
 
 "" color
-set t_Co=256                      " 256 colors
+"set t_Co=256                      " 256 colors
 set background=dark
-color grb256
+"color grb256
 
 set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
@@ -265,8 +265,11 @@ set wildignore+=*.png,*.jpg,*.gif
 
 let g:ctrlp_map = '<leader>t'
 
-colorscheme solarized
-set background=light
+colorscheme Tomorrow-Night
+
+"set background=light
+"set background=dark
+"colorscheme railscasts
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Rspec
