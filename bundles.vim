@@ -108,6 +108,12 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'ngmy/vim-rubocop'
 
+Bundle 'kana/vim-vspec'
+
+" A vim plugin that simplifies the transition between multiline and
+" single-line code
+Bundle 'AndrewRadev/splitjoin.vim'
+
 filetype plugin indent on     " required!
 
 "" Brief help
