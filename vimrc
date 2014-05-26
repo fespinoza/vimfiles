@@ -49,7 +49,7 @@ set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
 " color column
 highlight ColorColumn ctermbg=020202
-set colorcolumn=80
+set colorcolumn=81
 
 command! W :w                     " Added :W as a command for save
 let mapleader=","
@@ -309,7 +309,7 @@ function! EchoTags()
   echo join(split(&tags, ","), "\n")
 endfunction
 
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 
 " Open Github Repo on the browser
 :nmap <leader>gr :call GithubRepo()<CR>
@@ -338,3 +338,31 @@ nmap <leader>l :call EditNotes()<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
+
+command! Mkdir :call MkDirs()
+function! MkDirs()
+  :silent execute "!mkdir -p %%" | redraw!
+endfunction
+
+command! NewHashSyntax :call UpdateHashSyntax()
+rubyfile ~/.vim/lib/new_hash_syntax.rb
+function! UpdateHashSyntax()
+  let file_content=join(getline(1, line('$')), "\n")
+  ":ruby $result = NewHashSyntax.update_hashes(Vim.evaluate('file_content'))
+  ":ruby Vim.command("let result_content='#{$result}'")
+  :call setline(1, "holaa\n mundo")
+endfunction
+
+" reload my .vimrc
+command! So :source $MYVIMRC | :nohlsearch
+
+" to make push from my vim directories to github
+command! SyncVim :call SyncVimConfiguration()
+function! SyncVimConfiguration()
+  :silent execute "!(cd ~/Vim; git push)" | redraw!
+  :silent execute "!(cd ~/Vim/bundle/vim-snippets; git push)" | redraw!
+endfunction
+
+" Swap : and ; to make colon commands easier to type
+nnoremap  ;  :
+nnoremap  :  ;
