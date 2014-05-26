@@ -344,14 +344,14 @@ function! MkDirs()
   :silent execute "!mkdir -p %%" | redraw!
 endfunction
 
-command! NewHashSyntax :call UpdateHashSyntax()
-rubyfile ~/.vim/lib/new_hash_syntax.rb
-function! UpdateHashSyntax()
-  let file_content=join(getline(1, line('$')), "\n")
-  ":ruby $result = NewHashSyntax.update_hashes(Vim.evaluate('file_content'))
-  ":ruby Vim.command("let result_content='#{$result}'")
-  :call setline(1, "holaa\n mundo")
-endfunction
+"command! NewHashSyntax :call UpdateHashSyntax()
+""rubyfile ~/.vim/lib/new_hash_syntax.rb
+"function! UpdateHashSyntax()
+  "let file_content=join(getline(1, line('$')), "\n")
+  "":ruby $result = NewHashSyntax.update_hashes(Vim.evaluate('file_content'))
+  "":ruby Vim.command("let result_content='#{$result}'")
+  ":call setline(1, "holaa\n mundo")
+"endfunction
 
 " reload my .vimrc
 command! So :source $MYVIMRC | :nohlsearch
@@ -359,8 +359,8 @@ command! So :source $MYVIMRC | :nohlsearch
 " to make push from my vim directories to github
 command! SyncVim :call SyncVimConfiguration()
 function! SyncVimConfiguration()
-  :silent execute "!(cd ~/Vim; git push)" | redraw!
-  :silent execute "!(cd ~/Vim/bundle/vim-snippets; git push)" | redraw!
+  :silent execute "!(cd ~/Vim; git pull; git push)" | redraw!
+  :silent execute "!(cd ~/Vim/bundle/vim-snippets; git pull; git push)" | redraw!
 endfunction
 
 " Swap : and ; to make colon commands easier to type
