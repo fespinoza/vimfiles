@@ -35,6 +35,7 @@ Bundle 'kien/ctrlp.vim'
 
 " Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
+Bundle 'ngmy/vim-rubocop'
 
 " unimpaired.vim: pairs of handy bracket mappings
 Bundle 'tpope/vim-unimpaired'
@@ -92,7 +93,6 @@ Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skwp/vim-git-grep-rails-partial'
@@ -106,13 +106,15 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'ngmy/vim-rubocop'
 
 Bundle 'kana/vim-vspec'
 
 " A vim plugin that simplifies the transition between multiline and
 " single-line code
 Bundle 'AndrewRadev/splitjoin.vim'
+
+" Vim plugin for the Perl module / CLI script 'ack'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on     " required!
 

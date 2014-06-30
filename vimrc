@@ -364,5 +364,15 @@ function! SyncVimConfiguration()
 endfunction
 
 " Swap : and ; to make colon commands easier to type
-nnoremap  ;  :
-nnoremap  :  ;
+"nnoremap  ;  :
+"nnoremap  :  ;
+
+command! SingleQuotes :%s/"/'/g
+
+" set max syntax columns to prevent lag on long lines (default: 3000)
+set synmaxcol=128
+" disable cursorline (default: nocursorline)
+set nocursorline "
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
