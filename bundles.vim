@@ -13,9 +13,16 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'fespinoza/vim-snippets'
 
+" Neo complete
+"Bundle 'Shougo/neocomplete.vim'
+
 " Automatic Autocomplete compatible with SnipMate
-Bundle 'vim-scripts/L9'
-Bundle 'othree/vim-autocomplpop'
+"Bundle 'vim-scripts/L9'
+"Bundle 'othree/vim-autocomplpop'
+
+" Markdown stuff
+Bundle 'wikimatze/hammer.vim'
+
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
