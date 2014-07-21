@@ -332,7 +332,7 @@ endfunction
 map <leader>zw :ZoomWin<CR>
 
 function! EditNotes()
-  :vsp ~/.vim/NOTES.md.md
+  :vsp ~/.vim/NOTES.md
 endfunction
 nmap <leader>l :call EditNotes()<CR>
 
