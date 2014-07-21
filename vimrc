@@ -376,3 +376,5 @@ set nocursorline "
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+
+let g:neocomplcache_enable_at_startup = 1
