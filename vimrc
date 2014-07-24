@@ -41,9 +41,9 @@ set expandtab
 set autoindent
 
 "" color
-"set t_Co=256                      " 256 colors
+set t_Co=256                      " 256 colors
 set background=dark
-"color grb256
+color grb256
 
 set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
@@ -62,6 +62,21 @@ set infercase
 set omnifunc=syntaxcomplete#Complete
 set completefunc=syntaxcomplete#Complete
 set complete=.,w,b,u,t,i,d
+
+colorscheme Tomorrow-Night
+
+let g:markdown_fold_style = 'nested'
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" set max syntax columns to prevent lag on long lines (default: 3000)
+set synmaxcol=128
+" disable cursorline (default: nocursorline)
+set nocursorline "
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO COMMANDS
@@ -139,14 +154,6 @@ nmap <C-Down> ]e
 " multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PLUGIN MAPS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-S-n> :NERDTreeToggle<CR>
-map <Leader>cv <plug>NERDCommenterToggle
-map <Leader>b :BufExplorer<CR>
-map <Leader>bb :BufExplorer<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -259,45 +266,9 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:ctrlp_map = '<leader>t'
-
-colorscheme Tomorrow-Night
-
-"set background=light
-"set background=dark
-"colorscheme railscasts
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim Rspec
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:rspec_command = "Dispatch rspec {spec}"
-
-" testing shortchuts
-map <leader>rt :Dispatch rspec -t wip spec<CR>
-map <leader>rc :call RunCurrentSpecFile()<CR>
-map <leader>rk :Dispatch rspec -t now spec<CR>
-map <leader>ra :Dispatch rspec spec<CR>
-
-function! NewHashSyntax()
-  /:\([^, A-Z'"]\+\) \?=> \?\([^, ]\+\)
-  :%s//\1: \2/g
-endfunction
-
-map <leader>n :NERDTreeToggle<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic + Rubocop
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:airline_powerline_fonts = 1
-
-let g:markdown_fold_style = 'nested'
+""""""""""""""""""""""""""""
+"" Custom Commands
+""""""""""""""""""""""""""""
 
 command! Path :call EchoPath()
 function! EchoPath()
@@ -308,8 +279,6 @@ command! TagFiles :call EchoTags()
 function! EchoTags()
   echo join(split(&tags, ","), "\n")
 endfunction
-
-"let g:airline#extensions#tabline#enabled = 1
 
 " Open Github Repo on the browser
 :nmap <leader>gr :call GithubRepo()<CR>
@@ -328,30 +297,15 @@ function! OpenGithubApp()
   :silent execute "!github" | redraw!
 endfunction
 
-" ZoomWin
-map <leader>zw :ZoomWin<CR>
-
+nmap <leader>l :call EditNotes()<CR>
 function! EditNotes()
   :vsp ~/.vim/NOTES.md.md
 endfunction
-nmap <leader>l :call EditNotes()<CR>
-
-" Treat <li> and <p> tags like the block tags they are
-let g:html_indent_tags = 'li\|p'
 
 command! Mkdir :call MkDirs()
 function! MkDirs()
   :silent execute "!mkdir -p %%" | redraw!
 endfunction
-
-"command! NewHashSyntax :call UpdateHashSyntax()
-""rubyfile ~/.vim/lib/new_hash_syntax.rb
-"function! UpdateHashSyntax()
-  "let file_content=join(getline(1, line('$')), "\n")
-  "":ruby $result = NewHashSyntax.update_hashes(Vim.evaluate('file_content'))
-  "":ruby Vim.command("let result_content='#{$result}'")
-  ":call setline(1, "holaa\n mundo")
-"endfunction
 
 " reload my .vimrc
 command! So :source $MYVIMRC | :nohlsearch
@@ -363,18 +317,42 @@ function! SyncVimConfiguration()
   :silent execute "!(cd ~/Vim/bundle/vim-snippets; git pull; git push)" | redraw!
 endfunction
 
-" Swap : and ; to make colon commands easier to type
-"nnoremap  ;  :
-"nnoremap  :  ;
-
 command! SingleQuotes :%s/"/'/g
 
-" set max syntax columns to prevent lag on long lines (default: 3000)
-set synmaxcol=128
-" disable cursorline (default: nocursorline)
-set nocursorline "
-set ttyfast " u got a fast terminal
-set ttyscroll=3
-set lazyredraw " to avoid scrolling problems
+""""""""""""""""""""""""""""
+"" Plugins Configuration
+""""""""""""""""""""""""""""
 
-let g:neocomplcache_enable_at_startup = 1
+" ==== Greplace
+set grepprg=ack
+let g:grep_cmd_opts = '--noheading'
+
+" ==== Supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" ==== Syntastic + Rubocop
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:airline_powerline_fonts = 1
+
+" ==== ZoomWin
+map <leader>zw :ZoomWin<CR>
+
+" ==== Vim Rpsec
+let g:rspec_command = "Dispatch rspec {spec}"
+
+map <leader>rt :Dispatch rspec -t wip spec<CR>
+map <leader>rc :call RunCurrentSpecFile()<CR>
+map <leader>rk :Dispatch rspec -t now spec<CR>
+map <leader>ra :Dispatch rspec spec<CR>
+
+" ==== NERD Tree
+map <leader>n :NERDTreeToggle<CR>
+
+" ==== NERD Commenter
+map <Leader>cv <plug>NERDCommenterToggle
+
+" ==== Buffer Explorer
+map <Leader>bb :BufExplorer<CR>
+
+" ==== Ctrl+P
+let g:ctrlp_map = '<leader>t'

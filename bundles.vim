@@ -7,11 +7,20 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
+" Color themes
+Bundle 'nanotech/jellybeans.vim'
+
+" Search & Replace
+Bundle 'skwp/greplace.vim'
+
 " SnipMate (+ dependencies)
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'fespinoza/vim-snippets'
+
+" Supertab
+Bundle 'ervandew/supertab'
 
 " Neo complete
 "Bundle 'Shougo/neocomplete.vim'
