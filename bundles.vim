@@ -7,6 +7,9 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
+" Automatically create any non-existent directories before writing the buffer.
+Bundle 'pbrisbin/vim-mkdir'
+
 " Color themes
 Bundle 'nanotech/jellybeans.vim'
 

@@ -42,8 +42,9 @@ set autoindent
 
 "" color
 set t_Co=256                      " 256 colors
+"set t_ut=
 set background=dark
-color grb256
+colorscheme jellybeans
 
 set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
@@ -77,6 +78,10 @@ set nocursorline "
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO COMMANDS
@@ -332,7 +337,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " ==== Syntastic + Rubocop
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:airline_powerline_fonts = 1
+" configure syntastic syntax checking to check on open as well as save
+let g:syntastic_check_on_open=1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " ==== ZoomWin
 map <leader>zw :ZoomWin<CR>
@@ -356,3 +363,6 @@ map <Leader>bb :BufExplorer<CR>
 
 " ==== Ctrl+P
 let g:ctrlp_map = '<leader>t'
+
+" ==== Airline
+let g:airline_powerline_fonts = 1
