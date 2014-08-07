@@ -42,7 +42,7 @@ set autoindent
 
 "" color
 set t_Co=256                      " 256 colors
-"set t_ut=
+set t_ut=
 set background=dark
 colorscheme jellybeans
 
@@ -323,6 +323,11 @@ function! SyncVimConfiguration()
 endfunction
 
 command! SingleQuotes :%s/"/'/g
+
+command! LocalVimrc :call LocalVimfile()
+function! LocalVimfile()
+  :silent execute "!cp ~/.vim/vimrc.local ".getcwd()."/.vimrc" | redraw!
+endfunction
 
 """"""""""""""""""""""""""""
 "" Plugins Configuration
