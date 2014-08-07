@@ -4,6 +4,23 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+""""""""""""""""""""""""""""""
+" Angular Section
+
+" Better JS support
+Bundle 'pangloss/vim-javascript'
+
+" Syntax definitions for several libraries
+Bundle 'othree/javascript-libraries-syntax.vim'
+
+" Rails.vim but for angular
+Bundle 'burnettk/vim-angular'
+
+" Collection of snippets for angular projects
+Bundle 'matthewsimo/angular-vim-snippets'
+
+""""""""""""""""""""""""""""""
+
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
