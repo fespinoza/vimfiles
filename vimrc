@@ -304,7 +304,7 @@ endfunction
 
 nmap <leader>l :call EditNotes()<CR>
 function! EditNotes()
-  :vsp ~/.vim/NOTES.md.md
+  :vsp ~/.vim/NOTES.md
 endfunction
 
 command! Mkdir :call MkDirs()
