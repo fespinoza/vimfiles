@@ -21,6 +21,9 @@ Bundle 'matthewsimo/angular-vim-snippets'
 
 """"""""""""""""""""""""""""""
 
+" Projectionist provides granular project configuration using 'projections'
+Bundle 'tpope/vim-projectionist'
+
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 
