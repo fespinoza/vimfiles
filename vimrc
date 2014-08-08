@@ -329,6 +329,11 @@ function! LocalVimfile()
   :silent execute "!cp ~/.vim/vimrc.local ".getcwd()."/.vimrc" | redraw!
 endfunction
 
+command! LocalProjections :call LocalProjectionsFile()
+function! LocalProjectionsFile()
+  :silent execute "!cp ~/.vim/projections.json ".getcwd()."/.projections.json" | redraw!
+endfunction
+
 """"""""""""""""""""""""""""
 "" Plugins Configuration
 """"""""""""""""""""""""""""

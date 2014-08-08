@@ -16,3 +16,13 @@ let g:ctrlp_custom_ignore = '\v[\/](tmp|bower_components|node_modules)$'
 " Syntastic
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|dist|.git)$'
+
+let g:syntastic_javascript_checkers = ['jshint']
+
+let g:ctrl_show_hidden=1
+
+let NERDTreeIgnore=['\.git$','\.sass-cache$', '\.tmp$', '\~$', '\.DS_Store']
+let NERDTreeShowHidden=1
+
+set wildignore+=*.swp,*.swo,.DS_Store
