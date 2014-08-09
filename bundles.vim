@@ -121,9 +121,6 @@ Bundle 'tybenz/vimdeck'
 " Parse stack traces or quickfix entries and open the result in vim splits!
 Bundle 'mattboehm/vim-unstack'
 
-" Javascript support for vim
-Bundle "pangloss/vim-javascript"
-
 " Zoom in/out of windows (toggle between one window and multi-window)
 Bundle 'vim-scripts/ZoomWin'
 

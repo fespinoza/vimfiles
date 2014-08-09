@@ -9,9 +9,11 @@
   "app/scripts/controllers/*.js": {"type": "controller"},
   "app/scripts/directives/*.js": {"type": "directive"},
   "app/scripts/services/*.js": {"type": "service"},
-  "app/views/**/*.html": {"type": "view"},
-  "app/script/app.js": {"type": "app"},
+  "app/scripts/filters/*.js": {"type": "filter"},
+  "app/scripts/app.js": {"type": "app"},
   "app/index.html": {"type": "index"},
+  "app/views/**/*.html": {"type": "view"},
   "test/spec/**/*.js": {"type": "unit"},
-  "test/e2e/**/*.js": {"type": "integration"}
+  "test/e2e/**/*.js": {"type": "integration"},
+  "README.md": {"type": "doc"}
 }
