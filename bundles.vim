@@ -21,6 +21,8 @@ Bundle 'matthewsimo/angular-vim-snippets'
 
 """"""""""""""""""""""""""""""
 
+Bundle 'rking/ag.vim'
+
 Bundle 'tpope/vim-projectionist'
 
 " let Vundle manage Vundle required!
@@ -54,6 +56,11 @@ Bundle 'ervandew/supertab'
 " Markdown stuff
 Bundle 'wikimatze/hammer.vim'
 
+" HTML5 omnicomplete and syntax
+Bundle 'othree/html5.vim'
+
+" This is a vimscript for creating gists
+Bundle 'mattn/gist-vim'
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
