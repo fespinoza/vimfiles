@@ -4,7 +4,7 @@
   "doc/*.txt": {"type": "doc"},
   "README.markdown": {"type": "doc"}
 }
-// AngularJS
+// AngularJS With Yeoman + Grunt + Bower
 {
   "app/scripts/controllers/*.js": {"type": "controller"},
   "app/scripts/directives/*.js": {"type": "directive"},
