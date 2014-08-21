@@ -57,6 +57,8 @@ Bundle 'ervandew/supertab'
 " Markdown stuff
 Bundle 'wikimatze/hammer.vim'
 
+Bundle 'suan/vim-instant-markdown'
+
 " HTML5 omnicomplete and syntax
 Bundle 'othree/html5.vim'
 
