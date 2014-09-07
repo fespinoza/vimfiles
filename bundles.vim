@@ -21,6 +21,9 @@ Bundle 'matthewsimo/angular-vim-snippets'
 
 """"""""""""""""""""""""""""""
 
+"" Colorschemes Pack
+Bundle 'flazz/vim-colorschemes'
+
 Bundle 'rking/ag.vim'
 
 " Projectionist provides granular project configuration using 'projections'

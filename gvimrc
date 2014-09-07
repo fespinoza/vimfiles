@@ -2,8 +2,8 @@
 " fespinozacast@gmail.com
 
 if has("gui_macvim")
-  "set guifont=Inconsolata\ for\ Powerline:h14
-  set guifont=Monaco:h12
+  set guifont=Inconsolata\ for\ Powerline:h14
+  "set guifont=Monaco:h12
 else
   set guifont=Inconsolata\ 11	  " Linux font
 endif
