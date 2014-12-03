@@ -19,6 +19,11 @@ Bundle 'burnettk/vim-angular'
 " Collection of snippets for angular projects
 Bundle 'matthewsimo/angular-vim-snippets'
 
+Bundle 'elzr/vim-json'
+
+" Global commands in vim
+Bundle 'karlbright/qfdo.vim'
+
 """"""""""""""""""""""""""""""
 
 "" Colorschemes Pack

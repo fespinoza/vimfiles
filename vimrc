@@ -352,6 +352,11 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_json_checkers=['jsonlint']
+
+" Better :sign interface symbols
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
 
 " ==== ZoomWin
 map <leader>zw :ZoomWin<CR>
@@ -391,3 +396,7 @@ endif
 
 " ==== Coffescript
 
+nmap ,rr :redraw!<CR>
+
+" ===== JSON plugin
+let g:vim_json_syntax_conceal = 0
