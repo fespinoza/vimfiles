@@ -385,14 +385,19 @@ let g:ctrlp_map = '<leader>t'
 let g:airline_powerline_fonts = 1
 
 " ==== Silver Searcher
-"" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+" The Silver Searcher
 if executable('ag')
-  " Use Ag over Grep
+  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " ==== Coffescript
 
@@ -400,3 +405,5 @@ nmap ,rr :redraw!<CR>
 
 " ===== JSON plugin
 let g:vim_json_syntax_conceal = 0
+
+set foldnestmax=8

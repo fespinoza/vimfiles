@@ -24,6 +24,14 @@ Bundle 'elzr/vim-json'
 " Global commands in vim
 Bundle 'karlbright/qfdo.vim'
 
+" Start a * or # search from a visual block
+Bundle 'nelstrom/vim-visual-star-search'
+
+" Typescript
+Bundle "jason0x43/vim-js-indent"
+Bundle "leafgarland/typescript-vim"
+Bundle "clausreinke/typescript-tools"
+
 """"""""""""""""""""""""""""""
 
 "" Colorschemes Pack
