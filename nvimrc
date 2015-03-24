@@ -49,7 +49,7 @@ colorscheme railscasts
 set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
 " color column
-highlight ColorColumn ctermbg=020202
+highlight ColorColumn ctermbg=000000
 set colorcolumn=81
 
 command! W :w                     " Added :W as a command for save
