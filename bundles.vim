@@ -3,36 +3,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 """"""""""""""""""""""""""""""
-" Angular Section
 
-" Better JS support
-Bundle 'pangloss/vim-javascript'
-
-" Syntax definitions for several libraries
-Bundle 'othree/javascript-libraries-syntax.vim'
-
-" Rails.vim but for angular
-Bundle 'burnettk/vim-angular'
-
-" Collection of snippets for angular projects
-Bundle 'matthewsimo/angular-vim-snippets'
-
-Bundle 'elzr/vim-json'
+" let Vundle manage Vundle required!
+Bundle 'gmarik/vundle'
 
 " Global commands in vim
 Bundle 'karlbright/qfdo.vim'
 
 " Start a * or # search from a visual block
 Bundle 'nelstrom/vim-visual-star-search'
-
-" Typescript
-Bundle "jason0x43/vim-js-indent"
-Bundle "leafgarland/typescript-vim"
-Bundle "clausreinke/typescript-tools"
-
-""""""""""""""""""""""""""""""
 
 "" Colorschemes Pack
 Bundle 'flazz/vim-colorschemes'
@@ -42,9 +22,6 @@ Bundle 'rking/ag.vim'
 " Projectionist provides granular project configuration using 'projections'
 Bundle 'tpope/vim-projectionist'
 
-" let Vundle manage Vundle required!
-Bundle 'gmarik/vundle'
-
 " Automatically create any non-existent directories before writing the buffer.
 Bundle 'pbrisbin/vim-mkdir'
 
@@ -53,22 +30,6 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Search & Replace
 Bundle 'skwp/greplace.vim'
-
-" SnipMate (+ dependencies)
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'fespinoza/vim-snippets'
-
-" Supertab
-Bundle 'ervandew/supertab'
-
-" Neo complete
-"Bundle 'Shougo/neocomplete.vim'
-
-" Automatic Autocomplete compatible with SnipMate
-"Bundle 'vim-scripts/L9'
-"Bundle 'othree/vim-autocomplpop'
 
 " Markdown stuff
 Bundle 'wikimatze/hammer.vim'
@@ -176,6 +137,48 @@ Bundle 'AndrewRadev/splitjoin.vim'
 
 " Vim plugin for the Perl module / CLI script 'ack'
 Bundle 'mileszs/ack.vim'
+
+""""""""""""""""""""""""""""""
+" Angular Section
+
+" Better JS support
+Bundle 'pangloss/vim-javascript'
+
+" Syntax definitions for several libraries
+Bundle 'othree/javascript-libraries-syntax.vim'
+
+" Rails.vim but for angular
+Bundle 'burnettk/vim-angular'
+
+Bundle 'elzr/vim-json'
+
+" Typescript
+Bundle "jason0x43/vim-js-indent"
+Bundle "leafgarland/typescript-vim"
+Bundle "clausreinke/typescript-tools"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Snippets
+
+" SnipMate (+ dependencies)
+Bundle 'SirVer/ultisnips'
+Bundle 'fespinoza/vim-snippets'
+
+" Collection of snippets for angular projects
+Bundle 'matthewsimo/angular-vim-snippets'
+
+" Supertab
+Bundle 'Valloric/YouCompleteMe'
+"Bundle 'ervandew/supertab'
+
+" Neo complete
+"Bundle 'Shougo/neocomplete.vim'
+
+" Automatic Autocomplete compatible with SnipMate
+"Bundle 'vim-scripts/L9'
+"Bundle 'othree/vim-autocomplpop'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
 

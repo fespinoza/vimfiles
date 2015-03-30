@@ -337,12 +337,19 @@ endfunction
 "" Plugins Configuration
 """"""""""""""""""""""""""""
 
+" ==== YouCompleteMe
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>', '<Enter>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+" ==== UtilSnips
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit = "vertical"
+
 " ==== Greplace
 set grepprg=ack
 let g:grep_cmd_opts = '--noheading'
-
-" ==== Supertab
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " ==== Syntastic + Rubocop
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
