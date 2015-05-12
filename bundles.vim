@@ -178,6 +178,12 @@ Bundle 'Valloric/YouCompleteMe'
 " Automatic Autocomplete compatible with SnipMate
 "Bundle 'vim-scripts/L9'
 "Bundle 'othree/vim-autocomplpop'
+Bundle 'tpope/vim-tbone'
+Bundle 'tpope/vim-sensible'
+" eunuch.vim: helpers for UNIX
+Bundle 'tpope/vim-eunuch'
+" scriptease.vim: A Vim plugin for Vim plugins
+Bundle 'tpope/vim-scriptease'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
