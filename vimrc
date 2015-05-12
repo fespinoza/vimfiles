@@ -44,12 +44,12 @@ set autoindent
 set t_Co=256                      " 256 colors
 set t_ut=
 set background=dark
-colorscheme jellybeans
+colorscheme railscasts
 
 set clipboard+=unnamed            " enables copy in vim and paste in OSX
 
 " color column
-highlight ColorColumn ctermbg=020202
+highlight ColorColumn ctermbg=000000
 set colorcolumn=81
 
 command! W :w                     " Added :W as a command for save
@@ -64,8 +64,6 @@ set omnifunc=syntaxcomplete#Complete
 set completefunc=syntaxcomplete#Complete
 set complete=.,w,b,u,t,i,d
 
-colorscheme Tomorrow-Night
-
 let g:markdown_fold_style = 'nested'
 
 " Treat <li> and <p> tags like the block tags they are
@@ -76,7 +74,6 @@ set synmaxcol=128
 " disable cursorline (default: nocursorline)
 set nocursorline "
 set ttyfast " u got a fast terminal
-set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 
 " Open new split panes to right and bottom, which feels more natural
@@ -103,6 +100,7 @@ if has("autocmd")
   " May require ruby compiled in
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+  autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
   " My autocommants
   autocmd BufNewFile,BufRead *.js.erb set ft=javascript.eruby
