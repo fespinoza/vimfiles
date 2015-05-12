@@ -100,6 +100,7 @@ if has("autocmd")
   " May require ruby compiled in
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+  autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
   " My autocommants
   autocmd BufNewFile,BufRead *.js.erb set ft=javascript.eruby
@@ -338,7 +339,7 @@ endfunction
 """"""""""""""""""""""""""""
 
 " ==== YouCompleteMe
-let g:ycm_key_list_select_completion=['<C-n>', '<Down>', '<Enter>']
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 
 " ==== UtilSnips

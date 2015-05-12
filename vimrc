@@ -340,12 +340,19 @@ endfunction
 "" Plugins Configuration
 """"""""""""""""""""""""""""
 
+" ==== YouCompleteMe
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+" ==== UtilSnips
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit = "vertical"
+
 " ==== Greplace
 set grepprg=ack
 let g:grep_cmd_opts = '--noheading'
-
-" ==== Supertab
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " ==== Syntastic + Rubocop
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
@@ -405,5 +412,9 @@ nmap ,rr :redraw!<CR>
 
 " ===== JSON plugin
 let g:vim_json_syntax_conceal = 0
+
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 
 set foldnestmax=8

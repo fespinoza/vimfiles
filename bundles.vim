@@ -143,6 +143,7 @@ Bundle 'mileszs/ack.vim'
 
 " Better JS support
 Bundle 'pangloss/vim-javascript'
+Bundle 'othree/yajs.vim'
 
 " Syntax definitions for several libraries
 Bundle 'othree/javascript-libraries-syntax.vim'

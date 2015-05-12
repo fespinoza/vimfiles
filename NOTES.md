@@ -1,5 +1,6 @@
 # Vim Notes
 
+
 ## Commands
 * Ag [options] {patern} [{directory}]
 
