@@ -185,6 +185,9 @@ Bundle 'tpope/vim-eunuch'
 " scriptease.vim: A Vim plugin for Vim plugins
 Bundle 'tpope/vim-scriptease'
 
+" This vim plugin brings syntax highlighting and linting for API Blueprint. http://apiblueprint.org
+Bundle 'kylef/apiblueprint.vim'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
