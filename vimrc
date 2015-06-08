@@ -70,7 +70,7 @@ let g:markdown_fold_style = 'nested'
 let g:html_indent_tags = 'li\|p'
 
 " set max syntax columns to prevent lag on long lines (default: 3000)
-set synmaxcol=128
+"set synmaxcol=128
 " disable cursorline (default: nocursorline)
 set nocursorline "
 set ttyfast " u got a fast terminal
