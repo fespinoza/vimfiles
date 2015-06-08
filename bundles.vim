@@ -185,6 +185,8 @@ Bundle 'tpope/vim-eunuch'
 " scriptease.vim: A Vim plugin for Vim plugins
 Bundle 'tpope/vim-scriptease'
 
+Bundle 'christoomey/vim-tmux-navigator'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
