@@ -188,6 +188,8 @@ Bundle 'tpope/vim-scriptease'
 " This vim plugin brings syntax highlighting and linting for API Blueprint. http://apiblueprint.org
 Bundle 'kylef/apiblueprint.vim'
 
+Bundle 'christoomey/vim-tmux-navigator'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
