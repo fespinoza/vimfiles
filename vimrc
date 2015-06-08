@@ -120,6 +120,7 @@ if has("autocmd")
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+  autocmd BufNewFile .envrc set ft=conf
 
   autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
