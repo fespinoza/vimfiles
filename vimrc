@@ -120,6 +120,8 @@ if has("autocmd")
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+  " Use octodown as default build command for Markdown files
+  autocmd FileType markdown let b:dispatch = 'octodown --live-reload %'
   autocmd BufNewFile .envrc set ft=conf
 
   autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
@@ -379,7 +381,9 @@ map <leader>ra :Dispatch rspec spec<CR>
 map <leader>n :NERDTreeToggle<CR>
 
 " ==== NERD Commenter
-map <Leader>cv <plug>NERDCommenterToggle
+let NERDSpaceDelims = 1
+map <Leader>cc <plug>NERDComUncommentLine
+map <Leader>cv <plug>NERDComAlignedComment
 
 " ==== Buffer Explorer
 map <Leader>bb :BufExplorer<CR>
@@ -417,3 +421,17 @@ if has('nvim')
 endif
 
 set foldnestmax=8
+
+" ====== TaskList
+map <leader>v <Plug>TaskList
+
+function! s:Marko()
+  noautocmd silent execute "!open -a \"Marko\" " . expand("%:p")
+  if v:shell_error
+    echohl Error
+    echon "Problem opening the file."
+    echohl Normal
+  endif
+endfunction
+
+command! -bar -nargs=0 Marko call s:Marko()
