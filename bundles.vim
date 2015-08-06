@@ -34,7 +34,10 @@ Bundle 'skwp/greplace.vim'
 " Markdown stuff
 Bundle 'wikimatze/hammer.vim'
 
-Bundle 'suan/vim-instant-markdown'
+" Bundle 'suan/vim-instant-markdown'
+
+" Github markdown previewing straight from your shell.
+Bundle 'ianks/octodown'
 
 " HTML5 omnicomplete and syntax
 Bundle 'othree/html5.vim'
@@ -118,7 +121,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skwp/vim-git-grep-rails-partial'
-Bundle 'stefanoverna/vim-i18n'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-dispatch'
@@ -185,10 +187,18 @@ Bundle 'tpope/vim-eunuch'
 " scriptease.vim: A Vim plugin for Vim plugins
 Bundle 'tpope/vim-scriptease'
 
-" This vim plugin brings syntax highlighting and linting for API Blueprint. http://apiblueprint.org
+" This vim plugin brings syntax highlighting and linting for API Blueprint.
+" http://apiblueprint.org
 Bundle 'kylef/apiblueprint.vim'
 
-Bundle 'christoomey/vim-tmux-navigator'
+" Vim plugin to easily add I18n translations to your Rails project
+" Bundle 'stefanoverna/vim-i18n'
+
+" Eclipse like task list
+Bundle 'vim-scripts/TaskList.vim'
+
+" Mappings to manage GitHub-like task lists
+Bundle 'vitalk/vim-simple-todo'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
